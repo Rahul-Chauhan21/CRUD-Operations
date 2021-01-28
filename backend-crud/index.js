@@ -3,7 +3,6 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const genres = require("./routes/genres");
 const users = require("./routes/users");
 const app = express();
 
@@ -23,7 +22,6 @@ app.use(express.json());
 
 const port = process.env.PORT || 4000;
 
-app.use("/api/genres", genres);
 app.use("/api/users", users);
 
 app.listen(port, () => {
